@@ -1,0 +1,21 @@
+language: bash
+services: docker
+
+env:
+  - VERSION=latest
+  - VERSION=2.8
+
+install:
+  - git clone https://github.com/docker-library/official-images.git ~/official-images
+
+before_script:
+  - env | sort
+  - test latest = "$VERSION" || cd "$VERSION"
+  - image="marcelosousaalmeida/docker-sonar-scanner:${VERSION}"
+
+script:
+  - docker build -t "$image" .
+  - ~/official-images/test/run.sh "$image"
+
+after_script:
+  - docker images
