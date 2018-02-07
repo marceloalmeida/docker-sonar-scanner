@@ -8,9 +8,9 @@ ENV \
 
 
 RUN \
-  apk --update --no-cache add curl && \
+  apk --update --no-cache add curl ca-certificates && \
   cd /opt/ && \
-  curl -sOL https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-${SONAR_SCANNER_VERSION}.zip && \
+  curl -sLo /opt/sonar-scanner-${SONAR_SCANNER_VERSION}.zip  https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.0.3.778.zip && \
   unzip sonar-scanner-${SONAR_SCANNER_VERSION}.zip && \
   rm sonar-scanner-${SONAR_SCANNER_VERSION}.zip && \
   apk del curl && rm -rf /var/cache/apk/* /tmp/* /var/tmp/*
