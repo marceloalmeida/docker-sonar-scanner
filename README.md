@@ -3,7 +3,7 @@
 
 Common library used by many Scanners (SQ Scanner, SQ Scanner for Maven, SQ Scanner for Gradle, SQ Scanner for Ant, ...). Used to programmatically run SQ analysis.
 
-[![Build Status](https://travis-ci.org/marcelosousaalmeida/docker-sonar-scanner.svg?branch=master)](https://travis-ci.org/marcelosousaalmeida/docker-sonar-scanner)
+[![Build Status](https://travis-ci.org/marceloalmeida/docker-sonar-scanner.svg?branch=master)](https://travis-ci.org/marceloalmeida/docker-sonar-scanner)
 
 # Usage:
 ```sh
